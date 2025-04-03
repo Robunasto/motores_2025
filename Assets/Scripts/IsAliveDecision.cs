@@ -1,13 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-/*
-public class IsAliveDecision : AIAction
+
+public class IsAliveDecision : AIDecision
 {
-    public override void PerformAction()
+    public override bool Decide()
     {
-        base.OnEnterState();
-        GetComponentInChildren<Animator>().SetBool("IsAlive",true);
+        return GetComponent<Health>().currentHealth <= 0;
     }
 }
-*/

@@ -32,8 +32,8 @@ public class PlayerAttack : MonoBehaviour
         for (int i = 0; i < enemyColliders.Length; i++)
         {
             GameObject enemy = enemyColliders[i].gameObject;
-            enemy.GetComponentInChildren<SpriteRenderer>().color = Color.red;
-            //enemy.gameObject.GetComponent<AIBrain>().TransitionToState("Damaged");
+            //enemy.GetComponentInChildren<SpriteRenderer>().color = Color.red;
+            enemy.gameObject.GetComponent<AIBrain>().TransitionToState("Damaged");
             enemy.gameObject.GetComponent<Health>().TakeDamage(damagePoints);
 
             Vector2 attackDir = enemy.transform.position - this.transform.position;

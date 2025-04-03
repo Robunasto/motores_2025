@@ -7,5 +7,6 @@ public class PlayerAnimationEvents : MonoBehaviour
     public void OnAttackAnimationEvent()
     {
         this.gameObject.GetComponentInParent<PlayerAttack>().Attack();
+        //Destroy(transform.parent.gameObject);
     }
 }
